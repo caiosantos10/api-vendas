@@ -32,8 +32,10 @@ export default class CreateSessionService {
 
     const token = sign({}, authConfig.jwt.secret, {
       subject: user.id,
-      expiresIn: authConfig.jwt.secret
+      expiresIn: authConfig.jwt.expiresIn
     });
+
+    console.log(token)
 
     return {
       user,
