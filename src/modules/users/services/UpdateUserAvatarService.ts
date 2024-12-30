@@ -13,7 +13,7 @@ interface IRequest {
 
 export default class UpdateUserAvatarService {
   public async execute({ user_id, avatarFileName }: IRequest): Promise<User> {
-    const usersRepository = getCustomRepository(UserRepository);
+    const usersRepository = await getCustomRepository(UserRepository);
 
     const user = await usersRepository.findById(user_id);
 

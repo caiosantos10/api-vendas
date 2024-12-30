@@ -25,6 +25,6 @@ usersRouter.post('/',
   usersController.create,
 );
 
-usersRouter.patch('/users/avatar', isAuthenticated, upload.single('avatar'), userAvatarController.update);
+usersRouter.patch('/avatar', isAuthenticated, upload.single('avatar'), userAvatarController.update);
 
 export default usersRouter;
