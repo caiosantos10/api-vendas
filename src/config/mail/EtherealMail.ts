@@ -10,7 +10,7 @@ interface ITemplateVariables {
   [key: string]: string | number;
 }
 interface IParseMailTemplate {
-  template: string;
+  file: string;
   variables: ITemplateVariables;
 }
 
